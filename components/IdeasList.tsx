@@ -23,7 +23,7 @@ export function IdeasList() {
           Reset all Ideas and Conversation
         </Button>
         <AnimatePresence>
-          {!!ideas?.length &&
+          {!!ideas?.length ? (
             ideas
               .sort((a, b) => {
                 if (a.status === b.status) {
@@ -31,7 +31,12 @@ export function IdeasList() {
                 }
                 return a.status === IdeaStatus.todo ? -1 : 1;
               })
-              .map((task) => <Idea key={task.id} task={task} />)}
+              .map((task) => <Idea key={task.id} task={task} />)
+          ) : (
+            <p className="mt-4">
+              The list is empty. Start chatting with AI to modify this list.
+            </p>
+          )}
         </AnimatePresence>
       </div>
     </main>

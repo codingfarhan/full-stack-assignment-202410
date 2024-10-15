@@ -19,7 +19,7 @@ export default function Home() {
           </IdeasProvider>
           {/* The chat component on the right */}
           <CopilotChat
-            className="w-1/4 max-h-screen border-2"
+            className="w-1/4 max-h-screen border-2 mt-2"
             labels={{
               title: "Your Assistant",
               initial:

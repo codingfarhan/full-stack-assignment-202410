@@ -8,7 +8,7 @@ export default function Logs() {
         Logs
       </h1>
       {messages.map((log: Message) => (
-        <div className="p-10 border-1 mb-10 text-green-100">
+        <div className="p-10 border-1 mb-10 text-green-100" key={log.id}>
           {Object.entries(log).map(([key, value]) => (
             <div key={key} className="mb-2 text-green-100">
               <strong>{key}:</strong>{" "}

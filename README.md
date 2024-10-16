@@ -26,7 +26,7 @@ Before running the application, ensure you have the following installed:
 
    ```bash
    git clone https://github.com/codingfarhan/full-stack-assignment-202410
-   cd brainstorming-chatbot
+   cd full-stack-assignment-202410
    ```
 
 2. Install dependencies:

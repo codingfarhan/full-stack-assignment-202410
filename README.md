@@ -69,19 +69,29 @@ http://localhost:3000
 
 1. Enter a message in the chat interface to interact with the chatbot. You can brainstorm different ideas or ask the AI to generate an idea for you.
 
-https://github.com/codingfarhan/full-stack-assignment-202410/static/brainstorm.png?raw=true
+<p align="center">
+  <img src="static/add_ideas_to_list.png" width="350" title="hover text">
+</p>
 
 2. Once you think you have an idea that you like, simply ask the AI to add that idea to the list and it will do it for you. You can view the saved idea on the left side of screen.
 
-https://github.com/codingfarhan/full-stack-assignment-202410/static/add_ideas_to_list.png?raw=true
+<p align="center">
+  <img src="static/add_ideas_to_list.png" width="350" title="hover text">
+</p>
 
-3. You can also ask the AI to mark any idea as 'Completed', and you'll notice a 'tick' appear on that idea.
+3. Similarly, you can also ask the AI to remove any/all ideas from the list and it'll do that.
 
-https://github.com/codingfarhan/full-stack-assignment-202410/static/mark_as_complete.png?raw=true
+4. You can also ask the AI to mark any idea as 'Completed', and you'll notice a 'tick' appear on that idea.
 
-4. Use the "Reset" button to clear the chat history and saved ideas. It will go back to its originate state.
+<p align="center">
+  <img src="static/mark_as_complete.png" width="350" title="hover text">
+</p>
 
-https://github.com/codingfarhan/full-stack-assignment-202410/static/reset.png?raw=true
+5. Use the "Reset" button to clear the chat history and saved ideas. It will go back to its originate state.
+
+<p align="center">
+  <img src="static/reset.png" width="350" title="hover text">
+</p>
 
 ## Known Issues
 

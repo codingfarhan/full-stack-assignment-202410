@@ -93,6 +93,8 @@ http://localhost:3000
   <img src="static/reset.png" width="350" title="hover text">
 </p>
 
+6. (New) If you only want to reset the conversation but keep all ideas, click on the button 'Reset Conversation and Keep all ideas'. Your ideas will still be there but your chat history will be reset.
+
 ## Known Issues
 
 -> Since the app uses localStorage, the saved ideas will only persist for the current browser and device.

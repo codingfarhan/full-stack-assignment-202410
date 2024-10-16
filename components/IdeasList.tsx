@@ -7,7 +7,7 @@ import { AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 
 export function IdeasList() {
-  const { ideas, reset } = useIdeas();
+  const { ideas, reset, resetConversation } = useIdeas();
 
   // The list of Ideas component
   return (
@@ -19,8 +19,17 @@ export function IdeasList() {
           variant={"destructive"}
           onClick={reset}
           disabled={!ideas?.length}
+          className={"w-100"}
         >
           Reset all Ideas and Conversation
+        </Button>
+        <Button
+          type="button"
+          variant={"secondary"}
+          onClick={resetConversation}
+          className={"w-100"}
+        >
+          Reset Conversation and Keep all ideas
         </Button>
         <AnimatePresence>
           {!!ideas?.length ? (
@@ -33,9 +42,15 @@ export function IdeasList() {
               })
               .map((task) => <Idea key={task.id} task={task} />)
           ) : (
-            <p className="mt-4">
-              The list is empty. Start chatting with AI to modify this list.
-            </p>
+            <div className="w-3/4 mt-4 color-gray italic">
+              <p className="mt-4">
+                The list is empty. Start chatting with AI to modify this list.
+              </p>
+              <p>
+                You can ask the AI to add/remove ideas or mark an idea as
+                'complete'.
+              </p>
+            </div>
           )}
         </AnimatePresence>
       </div>

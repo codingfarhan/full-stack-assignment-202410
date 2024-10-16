@@ -121,9 +121,20 @@ export const IdeasProvider = ({ children }: { children: ReactNode }) => {
     setMessages([]);
   };
 
+  const resetConversation = () => {
+    setMessages([]);
+  };
+
   return (
     <IdeasContext.Provider
-      value={{ ideas, addIdea, setIdeaStatus, deleteIdea, reset }}
+      value={{
+        ideas,
+        addIdea,
+        setIdeaStatus,
+        deleteIdea,
+        reset,
+        resetConversation,
+      }}
     >
       {children}
     </IdeasContext.Provider>

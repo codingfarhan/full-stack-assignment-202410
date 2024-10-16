@@ -48,7 +48,7 @@ export function IdeasList() {
               </p>
               <p>
                 You can ask the AI to add/remove ideas or mark an idea as
-                'complete'.
+                Complete.
               </p>
             </div>
           )}

@@ -8,10 +8,9 @@ import { Button } from "@/components/ui/button";
 
 export function IdeasList() {
   const { ideas, reset, resetConversation } = useIdeas();
-
   // The list of Ideas component
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-8 md:p-24 w-3/4">
+    <main className="flex min-h-screen flex-col items-center justify-between p-8 md:p-24 w-2/4">
       <div className="flex flex-col gap-4 min-w-full md:min-w-[500px]">
         <h1 className="text-2xl font-bold">💡 My Ideas List</h1>
         <Button

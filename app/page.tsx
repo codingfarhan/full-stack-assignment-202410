@@ -1,6 +1,7 @@
 "use client";
 
 import { IdeasList } from "@/components/IdeasList";
+import Logs from "@/components/logs";
 import { IdeasProvider } from "@/lib/hooks/use-ideas";
 import { CopilotKit } from "@copilotkit/react-core";
 import { CopilotChat } from "@copilotkit/react-ui";
@@ -12,8 +13,14 @@ export default function Home() {
 
   return (
     <>
-      <CopilotKit publicApiKey={COPILOT_CLOUD_PUBLIC_API_KEY}>
+      <CopilotKit
+        publicApiKey={COPILOT_CLOUD_PUBLIC_API_KEY}
+        showDevConsole={true}
+      >
         <div className="flex flex-row gap-4 min-w-full md:min-w-[500px]">
+          {/* Logs on the left.. */}
+          <Logs />
+          {/* Ideas list in the middle... */}
           <IdeasProvider>
             <IdeasList />
           </IdeasProvider>
@@ -25,6 +32,7 @@ export default function Home() {
               initial:
                 "Hi! 👋 I can help you manage your Ideas in one place. You can brainstorm your ideas with me or you can aske me to add/remove the idea from the list!",
             }}
+            showResponseButton={true}
           />
         </div>
       </CopilotKit>

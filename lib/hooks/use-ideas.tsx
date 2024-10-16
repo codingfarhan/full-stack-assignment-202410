@@ -18,6 +18,7 @@ type IdeasContextType = {
   setIdeaStatus: (id: number, status: IdeaStatus) => void;
   deleteIdea: (id: number) => void;
   reset: () => void;
+  resetConversation: () => void;
 };
 
 const IdeasContext = createContext<IdeasContextType | undefined>(undefined);

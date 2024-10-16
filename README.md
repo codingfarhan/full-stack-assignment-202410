@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Brainstorming Chatbot Application
 
-## Getting Started
+This is a full-stack web application built with **Next.js** and **CopilotKit** library that allows users to brainstorm with a chatbot and save ideas generated during the conversation. Users can interact with the chatbot, save certain ideas to a list, and reset both the chat and saved ideas. All saved ideas is stored locally in the browser using **localStorage**.
 
-First, run the development server:
+## Live demo
+
+You can also use/interact with the app on this URL: https://full-stack-assignment-202410.vercel.app
+
+## Features:
+
+- Chat interface for brainstorming ideas with a chatbot.
+- Ability to save ideas from the chat to a local list.
+- Reset button to clear the chat history and saved ideas.
+- Uses **localStorage** for persistence of ideas.
+
+## Prerequisites
+
+Before running the application, ensure you have the following installed:
+
+- Node.js (v16 or higher)
+- NPM (v6 or higher) or Yarn
+
+## Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/codingfarhan/full-stack-assignment-202410
+   cd brainstorming-chatbot
+   ```
+
+2. Install dependencies:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## (Optional Step: Adding your own API key)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The app already comes with its own API key in **.env** file, but if you want to include your own API key then you can get it from here: https://cloud.copilotkit.ai/dashboard.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+3. Create a .env.local file (optional, if you ):
 
-## Learn More
+```bash
+touch .env
+```
 
-To learn more about Next.js, take a look at the following resources:
+THen add the environemnt variable NEXT_PUBLIC_COPILOT_CLOUD_PUBLIC_API_KEY to this file:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+NEXT_PUBLIC_COPILOT_CLOUD_PUBLIC_API_KEY=your_openai_api_key
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Run the server
 
-## Deploy on Vercel
+4. Start the development server:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm run start
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+5. Open the app in your browser:
+
+```bash
+http://localhost:3000
+```
+
+## Usage
+
+1. Enter a message in the chat interface to interact with the chatbot. You can brainstorm different ideas or ask the AI to generate an idea for you.
+
+https://github.com/codingfarhan/full-stack-assignment-202410/static/brainstorm.png?raw=true
+
+2. Once you think you have an idea that you like, simply ask the AI to add that idea to the list and it will do it for you. You can view the saved idea on the left side of screen.
+
+https://github.com/codingfarhan/full-stack-assignment-202410/static/add_ideas_to_list.png?raw=true
+
+3. You can also ask the AI to mark any idea as 'Completed', and you'll notice a 'tick' appear on that idea.
+
+https://github.com/codingfarhan/full-stack-assignment-202410/static/mark_as_complete.png?raw=true
+
+4. Use the "Reset" button to clear the chat history and saved ideas. It will go back to its originate state.
+
+https://github.com/codingfarhan/full-stack-assignment-202410/static/reset.png?raw=true
+
+## Known Issues
+
+-> Since the app uses localStorage, the saved ideas will only persist for the current browser and device.
+-> The chatbot might respond slowly if the OpenAI API key is invalid or if the API rate limit is reached.
+-> The app is not optimized for mobile devices.
+
+## Future Improvements
+
+-> Add user authentication to store ideas on a database for cross-device access.
+-> Enhance the chatbot’s customization and extend functionality for broader use cases.

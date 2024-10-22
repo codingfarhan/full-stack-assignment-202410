@@ -3,7 +3,7 @@ import {
   OpenAIAdapter,
   copilotRuntimeNextJSAppRouterEndpoint,
 } from "farhans-assignment";
-import OpenAI from "/Users/farhan/Desktop/opensource/copilotkit-new/CopilotKit/CopilotKit/node_modules/.pnpm/openai@4.53.0/node_modules/openai/index";
+import OpenAI from "openai";
 import { NextRequest } from "next/server";
 
 let latestOptions: any[] = [];

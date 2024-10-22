@@ -8,15 +8,12 @@ import { CopilotChat } from "@copilotkit/react-ui";
 import "@copilotkit/react-ui/styles.css";
 
 export default function Home() {
-  const COPILOT_CLOUD_PUBLIC_API_KEY =
-    process.env.NEXT_PUBLIC_COPILOT_CLOUD_PUBLIC_API_KEY;
+  // const COPILOT_CLOUD_PUBLIC_API_KEY =
+  //   process.env.NEXT_PUBLIC_COPILOT_CLOUD_PUBLIC_API_KEY;
 
   return (
     <>
-      <CopilotKit
-        publicApiKey={COPILOT_CLOUD_PUBLIC_API_KEY}
-        showDevConsole={true}
-      >
+      <CopilotKit runtimeUrl={"/api/copilotkit"} showDevConsole={true}>
         <div className="flex flex-row gap-4 min-w-full md:min-w-[500px]">
           {/* Logs on the left.. */}
           <Logs />
